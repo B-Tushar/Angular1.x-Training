@@ -1,0 +1,46 @@
+[
+    {
+        "modelId": "TX-5036C",
+        "modelName": "C Series Tractor",
+        "modelDesc": "C Series Tractor_Agriculture Tractor",
+        "modelStatus": "Active",
+        "modelCost": 250000,
+        "purchaseDate": 1506969000000,
+        "purchasedBy": "1006879",
+        "updateDate": 1506969000000,
+        "updatedBy": "1006879",
+        "product": {
+            "productId": "TX123456",
+            "productName": "AGR Tractor",
+            "productDesc": "Agriculture Tractor",
+            "productType": "Individual",
+            "productStatus": "Active",
+            "purchaseDate": 1507487400000,
+            "purchasedBy": "1006879",
+            "updateDate": 1507487400000,
+            "updatedBy": "1006879"
+        }
+    },
+    {
+        "modelId": "TX-5042D",
+        "modelName": "D Series Tractor",
+        "modelDesc": "D Series Tractor_Harvesting Tractor",
+        "modelStatus": "Active",
+        "modelCost": 400000,
+        "purchaseDate": 1506969000000,
+        "purchasedBy": "1006879",
+        "updateDate": 1506969000000,
+        "updatedBy": "1006879",
+        "product": {
+            "productId": "TX789123",
+            "productName": "HRA Tractor",
+            "productDesc": "Harvesting Tractor",
+            "productType": "Individual",
+            "productStatus": "Active",
+            "purchaseDate": 1507487400000,
+            "purchasedBy": "1006879",
+            "updateDate": 1507487400000,
+            "updatedBy": "1006879"
+        }
+    }
+]

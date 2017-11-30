@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl"> 
+<table>
+ <tr ng-repeat="item in myWelcome"> 
+   <td>{{item.first_name}}</td>
+   <td>{{item.last_name}}</td>
+   <td><img ng-src={{item.avatar}}></td>
+ </tr>
+</table>
+
+</div>
+
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+  $http.get("https://reqres.in/api/users")
+  .then(function(response) {
+      $scope.myWelcome = response.data.data;
+	  console.log($scope.myWelcome);
+  });
+});
+</script>
+
+</body>
+</html>

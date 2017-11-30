@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>AngularJS </title>
+    <script
+     src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script>
+    <script
+     src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-route.js"></script>
+  </head>
+  <body ng-app="demo">
+ 
+
+ <h1>Using $parent</h1>
+ <div ng-controller="ParentController">
+ 
+            <h2>Name :{{name}} </h2>
+            <h3>Age:{{age}}</h3>
+ 
+             <div ng-controller="ChildController">
+                    <h2>Parent Name :{{name}} </h2>
+                    <h3>Parent Age:{{$parent.age}}</h3>
+                    <h3>Child Age:{{age}}</h3>
+                    <h3>Country:{{country}}</h3>
+             </div>
+        </div>
+		 <hr/>
+		 <h1>Using Controller as</h1>
+  <div ng-controller="ParentVMController as parent">
+ 
+            <h2>Name :{{parent.name}} </h2>
+            <h3>Age:{{parent.age}}</h3>
+ 
+            <div ng-controller="ChildVMController as child">
+                <h2>Parent Name :{{parent.name}} </h2>
+                <h3>Parent Age:{{parent.age}}</h3>
+                <h3>Child Age:{{child.age}}</h3>
+                <h3>Country:{{child.country}}</h3>
+            </div>
+ </div>
+   <script type="text/javascript">
+			var myApp = angular .module('demo',[]);
+			
+			myApp.controller("ParentController", function ($scope) {
+				$scope.name = "DJ";
+				$scope.age = 32;
+			});
+			myApp.controller("ChildController", function ($scope) {
+			 
+				$scope.age = 22;
+				$scope.country = "India";
+			});
+			
+			
+			   myApp.controller("ParentVMController", function () {
+				var vm = this;
+				vm.name = "DJ";
+				vm.age = 32;
+			});
+			myApp.controller("ChildVMController", function () {
+				var vm = this;
+				vm.age = 22;
+				vm.country = "India";
+			 
+			});
+   </script>
+  </body>
+ </html>

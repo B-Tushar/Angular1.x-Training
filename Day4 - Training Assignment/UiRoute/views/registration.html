@@ -1,0 +1,143 @@
+<form class="form-horizontal page-body content-wrap"" name="myForm">
+    <h4>Warranty Registration</h4>
+	<div class="form-group">
+		<label for="firstName" class="col-sm-2 control-label">First
+			Name :</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control" ng-model="firstName"
+				placeholder="First Name" ng-required="required" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="lastName" class="col-sm-2 control-label">Last Name
+			:</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control" ng-model="lastName"
+				placeholder="Last Name" ng-required="required" />
+		</div>
+	</div>
+
+
+	<div class="form-group">
+		<label for="email" class="col-sm-2 control-label">Email
+			Address</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control" ng-model="email"
+				placeholder="Email ID" ng-required="required" />
+			<p>(Optional) Needed for free John Deere Owner's Edition Hat(US
+				Only)</p>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="email" class="col-sm-2 control-label">Verify Email</label>
+		<div class="col-sm-5">
+			<input type="email" class="form-control" id="email"
+				placeholder="verify Email ID" ng-required="required">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="email" class="col-sm-2 control-label">Purchase
+			Type</label> <label class="radio-inline"> <input type="radio"
+			name="inlineRadioOptions" id="individual" value="option1">
+			Individual
+		</label> <label class="radio-inline"> <input type="radio"
+			name="inlineRadioOptions" id="business" value="option2">
+			Business
+		</label>
+	</div>
+
+	<div class="form-group">
+		<label for="lastName" class="col-sm-2 control-label">Street
+			Address :</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control" id="streetAddress"
+				placeholder="Street Address" ng-required="required">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="lastName" class="col-sm-2 control-label">Address
+			Line 2 :</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control" id="address2"
+				placeholder="Address 2" ng-required="required">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="lastName" class="col-sm-2 control-label">City :</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control" id="city" placeholder="City"
+				ng-required="required">
+		</div>
+	</div>
+
+
+	<div class="form-group">
+		<label for="lastName" class="col-sm-2 control-label">State/Province
+			:</label>
+		<div class="col-sm-5">
+			<select class="form-control" id="stateSelect">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="lastName" class="col-sm-2 control-label">Zip/Postal
+			Code :</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control" id="postalCode"
+				placeholder="Postal Code" ng-required="required">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="lastName" class="col-sm-2 control-label">Telephone
+			Number :</label>
+		<div class="col-sm-5">
+			<input type="text" class="displayInline form-control" id="telNumber1"
+				max-length="3" ng-required="required"> <input type="text"
+				class="displayInline form-control" id="telNumber2" max-length="3"
+				ng-required="required"> <input type="text"
+				class="displayInline form-control" id="telNumber3" max-length="4"
+				ng-required="required">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="lastName" class="col-sm-2 control-label">Product
+			Identification/Serial Number :</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control" id="serialNumber"
+				placeholder="Serial Number" ng-required=true>
+			<p>17 Characters, Uppercase only.</p>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="lastName" class="col-sm-2 control-label">Purchase
+			Date :</label>
+		<div class="col-sm-5">
+			<input type="date" class="form-control" id="purchaseDate"
+				ng-required="required">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-5">
+			<button type="button" class="btn btn-success"
+				ng-click="registrationSubmit();">Submit</button>
+			<button type="button" class="btn btn-primary">Reset</button>
+		</div>
+	</div>
+
+</form>

@@ -1,0 +1,104 @@
+@CHARSET "ISO-8859-1";
+
+.displayInline {
+	display: inline-block;
+}
+
+#telNumber1, #telNumber2, #telNumber3 {
+	width: 30%;
+	margin-right: 2%;
+}
+
+.innerContainer {
+	width: 420px;
+	margin: 0 auto;
+	border: solid 1px #ccc;
+	border-radius: 4px;
+}
+
+.pageHeading {
+	margin-top: 11%;
+}
+
+.formHeading {
+	padding: 4%;
+	background-color: #ccc;
+}
+
+.innerContainer form {
+	padding: 4%;
+}
+
+.tableBlock {
+	border: solid 1px #000;
+}
+
+.tableBlock h5 {
+	background-color: #ccc;
+	margin: 0px;
+	padding: 3%;
+	font-weight: bold;
+}
+
+.tableBlock p {
+	padding: 2%;
+	margin: 0px;
+}
+
+.tableBlock div {
+	display: inline-block;
+}
+
+.marginTop1 {
+	margin: 10px 10px;
+}
+.marginRight{
+	margin-right:6%;
+}
+
+footer {
+	position: relative;
+	/* height: 300px;
+    width: 100%; */
+    background-color: #333333;
+}
+
+p.copyright {
+	position: absolute;
+	width: 100%;
+    color: #fff;
+    line-height: 40px;
+    font-size: 0.7em;
+	text-align: center;
+	bottom:0;
+}
+
+.breadcrumbback {
+    background:#a18c29;
+}
+.breadcrumb {
+  padding: 1px 3px 1px 4px;
+  margin-bottom: 0px;
+  list-style: none;
+  background-color: #5dc40d;
+  border-radius: 0px;
+  font-size:13px;
+}
+
+.breadcrumb > li {
+  display: inline-block;
+}
+
+.breadcrumb > li a {
+  color:#fff;
+}
+
+.breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #cccccc;
+  content: "/\00a0";
+}
+
+.breadcrumb > .active {
+  color:#000;
+}

@@ -1,0 +1,57 @@
+<html>  
+    <head>  
+        <title>Angular JS Includes</title>  
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js">  
+            </script>  
+			  
+    </head>  
+  
+    <body ng-app="root">  
+        
+			<div ng-controller="FirstCtrl">
+			  <input type="text" ng-model="firstName">
+			  <br>Input is : <strong>{{firstName}}</strong>
+			</div>
+			<hr>
+			<div ng-controller="SecondCtrl">
+			  Input should also be here: {{firstName}}
+			  </div>
+<script>  
+    var myApp = angular.module("root", [])
+	
+	
+	myApp.factory('Data', function () {
+
+    var data = {
+        FirstName: ''
+    };
+
+    return {
+        getFirstName: function () {
+            return data.FirstName;
+        },
+        setFirstName: function (firstName) {
+            data.FirstName = firstName;
+        }
+    };
+});
+
+
+   myApp.controller('FirstCtrl', function ($scope, Data) {
+
+    $scope.firstName = '';
+
+    $scope.$watch('firstName', function (newValue, oldValue) {
+        if (newValue !== oldValue) Data.setFirstName(newValue);
+    });
+});
+
+myApp.controller('SecondCtrl', function ($scope, Data) {
+
+    $scope.$watch(function () { return Data.getFirstName(); }, function (newValue, oldValue) {
+        if (newValue !== oldValue) $scope.firstName = newValue;
+    });
+});
+            </script>  
+    </body>  
+</html>  

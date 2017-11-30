@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<h3> absUrl :{{absUrl}}</h3>
+<h3> protocol :{{protocol}}</h3>
+
+<h3> host :{{host}}</h3>
+<h3> port :{{port}}</h3>
+</div>
+
+
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $location) {
+    $scope.absUrl = $location.absUrl();
+	$scope.protocol = $location.protocol();
+
+	//$scope.host = $location.host();
+	//$scope.port = $location.port();
+	
+});
+</script>
+
+</body>
+</html>

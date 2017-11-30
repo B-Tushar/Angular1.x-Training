@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Service Data Sharing</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+ <script>
+var myApp = angular.module("myApp", []);
+ 
+myApp.controller("DataController1", ['$scope', 'SharedDataService',
+    function ($scope, SharedDataService) {
+    $scope.Product = SharedDataService;
+ 
+    }]);
+ 
+myApp.controller("DataController2", ['$scope', 'SharedDataService',
+    function ($scope, SharedDataService) {
+    $scope.Product = SharedDataService;
+ 
+}]);
+
+myApp.service('SharedDataService', function () {
+     this.Product = {
+        name: '',
+        price: ''
+    };
+});
+ 
+ </script>
+</head>
+<body ng-app="myApp">
+ <div ng-controller="DataController1">
+            <h2>In Controller 1</h2>
+            <input type="text" ng-model="Product.name" /> <br/>
+            <input type="text" ng-model="Product.price" />
+            <h3>Product {{Product.name}} costs {{Product.price}}  <h3>
+        <div>
+        <hr/>
+        <div ng-controller="DataController2">
+            <h2>In Controller 2</h2>
+            <h3>Product {{Product.name}} costs {{Product.price}}  <h3>
+        <div>
+</body>
+</html>

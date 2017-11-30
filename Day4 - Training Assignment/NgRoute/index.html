@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>AngularJS Routing</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+ 
+ <script>
+ var app = angular.module("app", ['ngRoute']);
+ 
+ app.controller("homeController", function ($scope) {
+ $scope.message = "Welcome to Home Page!";
+ });
+ 
+ app.controller("aboutController", function ($scope) {
+ $scope.message = "Welcome to About Page!";
+ });
+ 
+ app.controller("contactController", function ($scope) {
+ $scope.message = "Welcome to Contact Page!";
+ });
+ 
+ app.config(['$routeProvider', function ($routeProvider) {
+ $routeProvider.when("/", {
+                template: "<h3>Home Page {{message}}</h3>",
+                controller: "homeController"
+                })
+                .when("about", {
+                template: "<h3>about Page {{message}}</h3>",
+                controller: "aboutController"
+                })
+                .when("contact", {
+                template: "<h3>contact Page {{message}}</h3>",
+                controller: "contactController"
+                })
+                .otherwise({
+                redirectTo: 'index.html'
+                });
+ }]);
+ 
+ </script>
+</head>
+<body ng-app="app">
+ <div>
+ <a href="#">Home</a> |
+ <a href="#contact">Contact</a> |
+ <a href="#about">About</a>
+ </div>
+ <div ng-view></div>
+</body>
+</html>

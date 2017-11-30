@@ -1,0 +1,47 @@
+<html>  
+    <head>  
+        <title>Angular JS Includes</title>  
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js">  
+            </script>  
+			  
+    </head>  
+  
+    <body ng-app="root" >  
+        
+        <div ng-controller="ctrl1">  
+           {{name}}
+        </div> 
+ <div ng-controller="ctrl2">  
+           {{name}}
+        </div> 	
+
+      <div ng-controller="ctrl3">  
+           {{name}}
+        </div> 
+ <div ng-controller="ctrl4">  
+           {{name}}
+        </div> 			
+<script>  
+     var app = angular.module("root", [])
+    app.value("companyNameValue", "John Deere")
+    app.controller("ctrl1", ["$scope", "companyNameValue", function($scope, companyNameValue) {
+        $scope.name = companyNameValue;
+    }]);
+	app.value("companyNameValue", "Yash Technology")
+	app.controller("ctrl2", ["$scope", "companyNameValue", function($scope, companyNameValue) {
+        $scope.name = companyNameValue;
+    }]);
+	
+
+    app.constant("companyNameConstant", "John Deere")
+    app.controller("ctrl3", ["$scope", "companyNameConstant", function($scope, companyNameConstant) {
+        $scope.name = companyNameConstant;
+    }]);
+	app.constant("companyName", "Yash Technology")
+	app.controller("ctrl4", ["$scope", "companyNameConstant", function($scope, companyNameConstant) {
+        $scope.name = companyNameConstant;
+    }]);
+	
+            </script>  
+    </body>  
+</html>  

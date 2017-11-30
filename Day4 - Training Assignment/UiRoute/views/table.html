@@ -1,0 +1,20 @@
+
+	<div ng-repeat="(key,value) in users">
+	
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>firstname</th>
+					<th>lastname</th>
+					<th>age</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in value">
+					<td>{{item.firstName}}</td>
+					<td>{{item.lastName}}</td>
+					<td>{{item.age}}</td>
+				</tr>
+			</tbody>
+		</table>
+</div>

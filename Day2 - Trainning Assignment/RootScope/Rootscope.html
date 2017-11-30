@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<body ng-app="myApp">
+<div ng-controller="Ctrl1" style="border:2px solid blue; padding:5px">
+ {{msg}} {{name}}
+</div>
+<br />
+<div ng-controller="Ctrl2" style="border:2px solid green; padding:5px">
+ {{msg}}
+ Hi ! {{myName}}
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script>
+ var app = angular.module('myApp', []);
+ 
+ app.controller('Ctrl1', function ($scope, $rootScope) {
+ $scope.msg = 'Ctrl1 =>';
+ $rootScope.name = 'AngularJS';
+ });
+ 
+ app.controller('Ctrl2', function ($scope, $rootScope) {
+ $scope.msg = 'Ctrl2 =>';
+ $scope.myName = $rootScope.name;
+ });
+</script>
+</body>
+</html>

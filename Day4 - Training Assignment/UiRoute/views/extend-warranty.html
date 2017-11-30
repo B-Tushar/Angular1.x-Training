@@ -1,0 +1,298 @@
+    <!-- Page Content Holder -->
+            <div id="content" class="content-wrap">
+                <h4>Extend Warranty</h4>
+                <div class="height">&nbsp; &nbsp;</div>
+                <div class="extwnt-tabs">
+                    <ul>
+                        <li ng-repeat="tab in tabs" 
+                            ng-class="{active:isActiveTab(tab.url)}" 
+                            ng-click="onClickTab(tab)">{{tab.title}} </li>
+                    </ul>
+                    <div id="mainView">
+                        <div ng-include="currentTab"></div>
+                    </div>
+                </div>
+                <br/>
+                <button type="button" class="btn btn-default pull-right">Calculate</button>
+                <button type="button" class="btn btn-default pull-right">Purchase</button>
+
+                <script type="text/ng-template" id="one.tpl.html">
+                    <div id="viewOne">
+                        <div class="row">
+                           <div class="col-md-6 ">
+                                <div class="gray-border">
+                                    <div class="gray-background">
+                                    <h4>Vehicle Werranty Details</h4>
+                                    </div>
+                                    <div class="inside-padding">
+                                        <div class="row">
+                                            <div class="col-md-5 text-left">
+                                            Werranty ID
+                                            </div>
+                                            <div class="col-md-7 ">
+                                                <input type="text" class="form-control"/>
+                                            </div>
+                                         </div>
+                                         <div class="height">&nbsp; &nbsp;</div>
+                                         <div class="row">
+                                            <div class="col-md-5 text-left">
+                                            Vehicle Type
+                                            </div>
+                                            <div class="col-md-7 ">
+                                                {}
+                                            </div>
+                                         </div>
+                                         <div class="height">&nbsp; &nbsp;</div>
+                                         <div class="row">
+                                            <div class="col-md-5 text-left">
+                                            Vehicle Name
+                                            </div>
+                                            <div class="col-md-7 ">
+                                                {}
+                                            </div>
+                                         </div>
+                                        <div class="height">&nbsp; &nbsp;</div>
+                                   
+                                         <div class="row">
+                                            <div class="col-md-5 text-left">
+                                                Model
+                                            </div>
+                                            <div class="col-md-7 ">
+                                                {}
+                                            </div>
+                                         </div>
+                                         <div class="height">&nbsp; &nbsp;</div>
+                                         <div class="row">
+                                            <div class="col-md-5 text-left">
+                                                Serial Number
+                                            </div>
+                                            <div class="col-md-7 ">
+                                                {}
+                                            </div>
+                                         </div>
+
+                                        <div class="height">&nbsp; &nbsp;</div>
+                                        <div class="row">
+                                            <div class="col-md-5 text-left">
+                                                Coverage
+                                            </div>
+                                            <div class="col-md-7 ">
+                                                {}
+                                            </div>
+                                         </div>
+
+                                         <div class="height">&nbsp; &nbsp;</div>
+                                        <div class="row">
+                                            <div class="col-md-5 text-left">
+                                                Werranty Valid from
+                                            </div>
+                                            <div class="col-md-7 ">
+                                                {}
+                                            </div>
+                                         </div>
+
+                                         <div class="height">&nbsp; &nbsp;</div>
+                                        <div class="row">
+                                            <div class="col-md-5 text-left">
+                                                Werranty Expiry Date
+                                            </div>
+                                            <div class="col-md-7 ">
+                                                {}
+                                            </div>
+                                         </div>
+
+                                         <div class="height">&nbsp; &nbsp;</div>
+                                        <div class="row">
+                                            <div class="col-md-5 text-left">
+                                                Vehicle hypothecited By
+                                            </div>
+                                            <div class="col-md-7 ">
+                                                {}
+                                            </div>
+                                         </div>
+
+                                         <div class="height">&nbsp; &nbsp;</div>
+                                        <div class="row">
+                                            <div class="col-md-5 text-left">
+                                                Vehicle Purchased from 
+                                            </div>
+                                            <div class="col-md-7 ">
+                                                {}
+                                            </div>
+                                         </div>
+                                         
+                                    </div>
+                               </div>
+                           </div>
+                           <div class="col-md-6 ">
+                                <div class="gray-border">
+                                    <div class="gray-background text-center">
+                                    <h4>Full Werranty Costs 3000 $ / Year</h4>
+                                    </div>
+                                    <div class="inside-padding">
+                                       <div class="row"></div>
+                                           <h3 class="text-center"|>Custom  Period</h3>
+                                           <br/>
+                                           <div class="col-md-3"></div>
+                                           <div class="col-md-6">
+                                               <div class="row">
+                                                   <div class="col-md-2">
+                                                       From
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <input type="date"  class="form-control"/>
+                                                    </div>
+                                               </div>
+                                                 <div class="height">&nbsp; &nbsp;</div>
+                                               <div class="row">
+                                                   <div class="col-md-2">
+                                                       To
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <input type="date"  class="form-control"/>
+                                                    </div>
+                                               </div>
+                                           </div>
+                                    </div>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <div class="gray-background text-center">
+                                    <h4><a href="">Select Plan</a></h4>
+                                    </div>
+                                  
+                               </div>
+                           </div>
+                       </div>
+                    </div>
+                </script>
+        
+                <script type="text/ng-template" id="two.tpl.html">
+                    <div class="row">
+                           <div class="col-md-6 ">
+                                <div class="gray-border">
+                                    <div class="gray-background">
+                                    <h4>Custom Wa rranty</h4>
+                                    </div>
+                                    <div class="inside-padding">
+                                        <div class="row">
+                                            <div class="col-md-4 text-left">
+                                            Werranty ID
+                                            </div>
+                                            <div class="col-md-8 ">
+                                                <input type="text" class="form-control"/>
+                                            </div>
+                                         </div>
+                                         <div class="height">&nbsp; &nbsp;</div>
+                                         <div class="row">
+                                            <div class="col-md-4 text-left">
+                                            Product Name
+                                            </div>
+                                            <div class="col-md-8 ">
+                                                <select class="form-control">
+                                                  <option value="volvo">ABC</option>
+                                                  <option value="saab">DEF</option>
+                                                  <option value="opel">FHR</option>
+                                                  <option value="audi">XBV</option>
+                                                </select>
+                                            </div>
+                                         </div>
+                                         <div class="height">&nbsp; &nbsp;</div>
+                                         <div class="row">
+                                            <div class="col-md-4 text-left">
+                                            Product Model
+                                            </div>
+                                            <div class="col-md-8 ">
+                                                <select class="form-control">
+                                                  <option value="volvo">DEF</option>
+                                                  <option value="saab">DEF</option>
+                                                  <option value="opel">FHR</option>
+                                                  <option value="audi">XBV</option>
+                                                </select>
+                                            </div>
+                                         </div>
+                                        <div class="height">&nbsp; &nbsp;</div>
+                                   
+                                         <div class="row">
+                                            <div class="col-md-4 text-left">
+                                            Select Part
+                                            </div>
+                                            <div class="col-md-8 ">
+                                                <input type="text" class="form-control"/>
+                                                <label>
+                                                    <input type="checkbox" ng-model="checkboxModel.value1" value="500$">
+                                                    Part1: $ 500
+                                            </label><br/>
+                                            <label>
+                                                <input type="checkbox" ng-model="checkboxModel.value2" value="600$">
+                                                Part2: $ 600
+                                            </div>
+                                         </div>
+                                         <div class="height">&nbsp; &nbsp;</div>
+                                         <div class="row">
+                                            <div class="col-md-12 text-left">
+                                                <img src="images/tractor.jpg" class="img-responsive gray-border"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                               </div>
+                           </div>
+                           <div class="col-md-6 ">
+                                <div class="gray-border">
+                                    <div class="gray-background text-center">
+                                    <h4>Custom Werranty Costs 5000 $</h4>
+                                    </div>
+                                    <div class="inside-padding">
+                                       <div class="row"></div>
+                                           <h3 class="text-center"|>Custom  Period</h3>
+                                           <br/>
+                                           <div class="col-md-3"></div>
+                                           <div class="col-md-6">
+                                               <div class="row">
+                                                   <div class="col-md-2">
+                                                       From
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <input type="date"  class="form-control"/>
+                                                    </div>
+                                               </div>
+                                                 <div class="height">&nbsp; &nbsp;</div>
+                                               <div class="row">
+                                                   <div class="col-md-2">
+                                                       To
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <input type="date"  class="form-control"/>
+                                                    </div>
+                                               </div>
+                                           </div>
+                                    </div>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <div class="gray-background text-center">
+                                    <h4><a href="">Select Plan</a></h4>
+                                    </div>
+                                  
+                               </div>
+                           </div>
+                       </div>
+                </script>
+            </div>
+        </div>

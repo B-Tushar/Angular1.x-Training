@@ -1,0 +1,32 @@
+<html>  
+    <head>  
+        <title>Angular JS Includes</title>  
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js">  
+            </script>  
+			  
+    </head>  
+  
+    <body>  
+        
+        <div ng-app="root" ng-controller="appCtrl">  
+          Area of circle is {{area}}
+        </div>  
+<script>  
+     var app = angular.module('root', []);
+
+app.constant('PI', 3.14159265359);
+
+app.config(function(PI){
+    var radius = 4;
+    //PI can be injected here in the config block
+    var perimeter = 2 * PI * radius;
+});
+
+app.controller('appCtrl', function($scope,PI) {
+    var radius = 4;
+    // calculate area of the circle
+    $scope.area = PI * radius * radius; 
+});
+            </script>  
+    </body>  
+</html>  
