@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp">
+
+<div ng-controller="MyController" >
+    <form name="Form">
+	   <h3>Binding Textbox</h3><br/>
+       First name : <input type="text" name="firstName" ng-model="myForm.firstName" required>{{Form.firstName.$valid}}</h3> <br/>
+       Last name : <input type="text" name="lastName"  ng-model="myForm.lastName" required>{{Form.lastName.$valid}}</h1>  <br/>
+	    {{myForm.firstName}} {{myForm.lastName}}<br/>
+		 <h3>Binding Checkboxes</h3><br/>
+	   <input type="checkbox" ng-model="myForm.wantNewsletter" ng-true-value="yes" ng-false-value="no" ng-click="checkStuff()">wantNewsletter<br/>
+	    <h3>Binding Radio Buttons</h3><br/>
+		<input type="radio" ng-model="myForm.whichNewsletter" value="weeklyNews" ng-click="checkStuff()">    weeklyNews
+        <input type="radio" ng-model="myForm.whichNewsletter" value="monthlyNews" ng-click="checkStuff()">   monthlyNews
+		<h3>Binding Select Box</h3><br/>
+		<select ng-model="myForm.car">
+            <option value="nissan">Nissan</option>
+            <option value="toyota">Toyota</option>
+            <option value="fiat">Fiat</option>
+        </select><br/>
+		<h3>Binding Option Box</h3><br/>
+		 <select ng-model="myForm.car2"
+                ng-options="obj.id as obj.name for obj in myForm.options">
+				 <option value="">Please choose a car</option>
+        </select><br/>
+	
+		
+    </form>
+</div>
+
+<script>
+    angular.module("myapp", [])
+            .controller("MyController", function($scope) {
+                $scope.myForm = {
+				firstName:'Jakob',
+				lastName  : "Jenkov",
+				wantNewsletter:'no',
+				car  : "nissan",
+				submitTheForm:function(){
+				debugger;
+				}
+				
+				};
+				
+				$scope.myForm.options = [
+				  { id : "1", name: "Nissan" }
+				 ,{ id : "2", name: "Toyota" }
+				 ,{ id : "3"  , name: "Fiat" }
+				 ];
+				
+				$scope.checkStuff =  function(){
+				
+                console.log($scope.myForm);
+				}
+            } );
+</script>
+
+</body>
+</html>
